@@ -1,3 +1,505 @@
-print(nagarjun)
-user = input(name)
-print("user ", user, "start learning js also")
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Website Tutorial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+.navbar{
+	margin-bottom: 0;
+	border-radius: 0;
+	background-color: #5E4485;
+	color:#FFF;
+	padding: 1% 0;
+	font-size: 1.2emm;
+	border: 0;
+}
+
+.navbar-brand {
+	float: left;
+	min-height: 63px;
+	padding: 0 10px 5px;
+}
+.navbar-inverse .navbar-nav .active a,.navbar-inverse .navbar-nav .active a:focus,.navbar-inverse .navbar-nav .active a:hover {
+	color: #FFF;
+	background-color: #5E4485;
+}
+
+.navbar-inverse .navbar-nav li  a {
+	color: #D5D5D5;
+	display: block;
+	float: left;
+}
+.carousel-caption {
+	top: 50%;
+	transform: translateY(-50%);
+	text-transform: uppercase;
+}
+.btn {
+	font-size: 10px;
+	color: #FFF;
+	padding: 12px 22px;
+	background: #5E4485;
+	border: 2px solid #FFF;
+}
+#b1 {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #FFF;
+  background-color: #5E4485;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#b1:hover {background-color: #3e8e41}
+
+#b1:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.container {
+	margin: 4% auto;
+}
+#icon {
+	max-width: 200px;;
+	margin: 1% auto;
+}
+#saa:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+#mount {
+    -webkit-filter: drop-shadow(8px 8px 10px #5E4485); /* Safari 6.0 - 9.0 */
+    filter: drop-shadow(8px 8px 10px #5E4485);
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+ footer {
+	width: 100%;
+	background-color: #5E4485;
+	padding: 3%;
+	color: white;
+}
+.fa {
+	padding: 15px;
+	font-size: 25px;
+	color: #FFF;
+}
+.fa:hover {
+	color: #D5D5D5;
+	text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  	
+}
+
+body {
+  background-color: #f1f1f1;
+
+}
+
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 10px;
+  width: 70%;
+  min-width: 300px;
+  float: right;
+}
+
+h1 {
+  text-align: center;  
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4CAF50;
+}
+
+
+
+@media (max-width: 400px) {
+	.fa{
+		font-size: 20px;
+		padding: 10px;
+	}
+}
+
+@media (max-width: 600px) {
+	.carousel-caption {
+		display: none;
+	}
+	#icon {
+		max-width: 150px;
+	}
+	h2 {
+		font-size: 1.9em;
+	}
+}
+
+
+  </style>
+
+
+</head>
+<body>
+	<div class="main">
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="img/webdesign.png"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#myPage">Home</a></li>
+					<li><a href="#about us">About us</a></li>
+					<li><a href="#services">services</a></li>
+					<li><a href="#testmonials">testmonials</a></li>
+					<li><a href="#contact">contact us</a></li>
+					
+				</ul>
+			</div>
+	</div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+<div class="carousel-inner" role="listbox">
+	<div class="item active">
+		<img src="img/mountains.png">
+		<div class="carousel-caption">
+			<h1>get to know bootstrap</h1>
+		</div>
+		
+	</div><!--end active -->
+	<div class="item">
+		<img src="img/snow.png">
+	</div>
+	<div class="item">
+		<img src="img/red.png">
+	</div>
+</div>	
+<!-- start slider controls -->
+<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left" area-hidden="true"></span>	
+<span class="sr-only">previous</span></a>
+<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right" area-hidden="true"></span>	
+<span class="sr-only">next</span></a>
+</div><!-- end slider -->
+<div id="services" class="container text-center">
+		<button type="button" class="btn btn-success" title="Hai! There" data-toggle="popover" data-placement="right" data-content="Welcome"  id="b1">Get ready
+		</button>				
+
+	<h2>What I am learining</h2>
+		<div class="row">
+		<div class="col-sm-4">
+			<img src="img/html5.png" id="icon">
+			<h4>HTML5</h4>			
+		</div>
+		<div class="col-sm-4">
+			<img src="img/bootstrap.png" id="icon">
+			<h4>BOOTSTRAP</h4>			
+		</div>
+		<div class="col-sm-4">
+			<img src="img/css3.png" id="icon">
+			<h4>CSS3</h4>			
+		</div>
+		
+	</div>
+	</div>
+	<div id="about us" class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h4>Bootstrap is completely free to use!</h4>
+				<p>Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites.With our online editor, you can edit the code, and click on a button to view the result.</p>
+				<p>Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites.With our online editor, you can edit the code, and click on a button to view the result.</p>
+			</div>
+			<div class="col-md-6">
+				<img src="img/bootstrap2.jpg" class="img-responsive" id="mount">
+			</div>
+		</div>
+
+		
+	</div>
+		<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<h4>Built with sass</h4>
+				<p>Sass lets you use features that don't exist in CSS yet like variables, nesting, mixins, inheritance and other nifty goodies that make writing CSS fun again. Once you start tinkering with Sass, it will take your preprocessed Sass file and save it as a normal CSS file that you can use in your web site.</p>
+				
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" >
+				<img src="img/sass.png" class="img-responsive" id="saa">
+			</div>
+		
+
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<h4>Built with sass</h4>
+				<p>There are two parts to any CSS preprocessor: the language and the compiler. The language itself is what you'll be writing. LESS looks just like CSS, except for a bunch of extra features. The compiler is what turns that LESS code into standard CSS that a Web browser can read and process.</p>
+				
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<img src="img/less.png" class="img-responsive" id="saa" id="mount">
+
+			</div>
+		</div>
+	</div>
+	<div class="container">
+	    <div class="row">
+			<h4><a href="#hidden" data-toggle="collapse">care to learn more about bootstrap?</a></h4>
+			<div id="hidden" class="collapse">
+				<h4>cool thing to learn how bootstrap works!</h4>
+				<p>Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites.With our online editor, you can edit the code, and click on a button to view the result.</p>
+				<p>Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites.With our online editor, you can edit the code, and click on a button to view the result.</p>
+			</div>
+		</div>
+	</div >
+	<div id="testmonials" class="container">
+		<div class="row">
+	<div class="col-lg-6" id="googleMap" style="width:40%;height:400px;">
+		
+	</div>
+	<div class="col-lg-6">
+		<form id="regForm" action="/action_page.php">
+  <h1>Register:</h1>
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab">Name:
+    <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
+    <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
+  </div>
+  <div class="tab">Contact Info:
+    <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
+    <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
+  </div>
+  <div class="tab">Birthday:
+    <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
+    <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
+    <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+  </div>
+  <div class="tab">Login Info:
+    <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
+    <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+  </div>
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+</form>
+
+		</div>
+</div>
+</div>
+
+
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(12.939078, 77.749514),
+    zoom:16,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBe0z_mjDsITYHvpaFsmpM2RX4FGjxUgq4&callback=myMap"></script>
+
+	<footer id="contact" class="container-fluid text-center">
+	<div class="row">
+		<div class="col-sm-4">
+		<h3>contact us</h3>
+		<br>
+		<h4>Our address and contact info here.</h4>
+	</div>
+		<div class="col-sm-4">
+			<h3>connect</h3>
+			<a href="https://goo.gl/YX4gEb" class="fa fa-facebook"></a>
+			<a href="https://goo.gl/dnxUyH" class="fa fa-twitter"></a>
+			<a href="https://goo.gl/PPNQUi" class="fa fa-linkedin"></a>
+			<a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+			<a href="https://goo.gl/xdr1Xt" class="fa fa-google"></a>
+		</div>
+		<div class="col-sm-4">
+			<img src="img/learning.png" class="icon">
+		</div>
+	</div>
+</footer>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+
+<script>
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the crurrent tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  //... and run a function that will display the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+</script>
+</div>
+</body>
+</html>
